@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'hobbit/version'
+require 'mantis/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "hobbit"
-  spec.version       = Hobbit::VERSION
+  spec.name          = "mantis"
+  spec.version       = Mantis::VERSION
   spec.authors       = ["franklin"]
   spec.email         = ["franklin@weareinteractive.com"]
   spec.description   = %q{Gem with some useful command line tools.}
   spec.summary       = %q{Command line snippets.}
-  spec.homepage      = "https://github.com/franklinkim/gem-hobbit"
+  spec.homepage      = "https://github.com/franklinkim/gem-mantis"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
