@@ -2,4 +2,6 @@
 # -*- mode: ruby -*-
 
 require 'mantis'
-Mantis::Cli.start
+
+require 'mantis/cli'
+Mantis::CLI.start(ARGV, :debug => true)
