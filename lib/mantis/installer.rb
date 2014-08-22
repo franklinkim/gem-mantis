@@ -16,7 +16,7 @@ module Mantis
 
       unless File.exists?(config)
        puts "No Mantisfile file found!"
-       next
+       return
       end
 
       text = File.open(config).read
