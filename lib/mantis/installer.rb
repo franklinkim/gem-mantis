@@ -13,7 +13,11 @@ module Mantis
 
     def run(options)
       config = "Mantisfile"
-      raise Thor::Error, "No Mantisfile file found!" unless File.exists?(config)
+
+      unless File.exists?(config)
+       puts "No Mantisfile file found!"
+       next
+      end
 
       text = File.open(config).read
       text.gsub!(/\r\n?/, "\n")
@@ -24,8 +28,9 @@ module Mantis
         uri, tag, name = line.split(',')
 
         if Dir.exists?(name.strip)
-          puts "Entering #{uri.strip} in #{name.strip}"
+          puts "Fetching #{uri.strip} in #{name.strip}"
           g = Git.open(name.strip)
+          g.fetch
         else
           puts "Cloning #{uri.strip} to #{name.strip}..."
           g = Git.clone(uri.strip, name.strip)

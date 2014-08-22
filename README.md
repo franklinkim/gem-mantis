@@ -1,45 +1,27 @@
-# snippy
+# mantis
 
-[![Gem Version](https://badge.fury.io/rb/snippy.png)](http://badge.fury.io/rb/snippy)
+[![Gem Version](https://badge.fury.io/rb/mantis.png)](http://badge.fury.io/rb/mantis)
 
-> Gem with some useful command line tools.
+> Mantis is a quick and dirts git submodule management alternative.
+> 
+> It reads out a `Matisfile` and clones repositories into to the given path with the given tag/branch.
 
 ## Installation
 
 ```
-$ gem install snippy
+$ gem install mantis
 ```
 
 ## Usage
 
 ```
-$ snippy
+$ mantis help
 Commands:
-  snippy apache SUBCOMMAND ...ARGS  # Snippets & Tools for apache
-  snippy help [COMMAND]             # Describe available commands or one specific command
+  mantis help [COMMAND]  # Describe available commands or one specific command
+  mantis install         # Install the current environment to the system
 
 Options:
-  [--verbose]
-```
-
-### Apache
-
-```
-$ snippy apache
-Commands:
-  snippy apache certificate FILENAME  # Create self signed openssl certificate.
-  snippy apache help [COMMAND]        # Describe subcommands or one specific subcommand
-```
-
-## Development
-
-When developing you can use the given `rake` tasks:
-
-```
-$ rake -T
-rake build    # Build snippy-0.1.1.gem into the pkg directory.
-rake install  # Build and install snippy-0.1.1.gem into system gems.
-rake release  # Create tag v0.1.1 and build and push snippy-0.1.1.gem to Rubygems```
+  -V, [--verbose=Enable verbose output mode], [--no-verbose]
 ```
 
 ## Contributing
@@ -52,4 +34,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 5. Create new Pull Request
 
 ## License
-Copyright (c) 2013 franklin under the MIT license.
+Copyright (c) We Are Interactive under the MIT license.
